@@ -4,19 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Skills Index Page</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
-    <h1>My Dev Skills:</h1>
+    <h1>My Dev Skills</h1>
     <ul>
-    <!-- name, description, level, experience -->
-    <% skills.forEach(skill => { %>
+    <% skills.forEach((skill, idx) => { %>
         <li>
-            <h5><%= skill.name %></h5>
-            <p><%= skill.description %></p>
-            <p>Mastery Level: <%= skill.level %></p>
-            <p>Amount of Experience: <%= skill.experience %></p>
+            <%- include('show', {skill, partial: true}) %>
+            &mdash;
+            <a href="/skills/<%= skill.name %>" class="see-more">See More...</a>
         </li>
     <% }); %>
     </ul>

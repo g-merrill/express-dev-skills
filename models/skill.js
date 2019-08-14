@@ -1,7 +1,7 @@
 const skills = [
     {
         name: 'JS',
-        description: 'A programming language',
+        description: 'a programming language',
         level: '8',
         experience: '3 months'
     },
@@ -20,9 +20,21 @@ const skills = [
 ];
 
 module.exports = {
-    getAll
+    getAll,
+    getIdx,
+    getOne
 };
 
 function getAll() {
     return skills;
+}
+
+function getIdx(skillString) {
+    return skills.findIndex(skill => {
+        return skill.name === skillString;
+    });
+}
+
+function getOne(id) {
+    return skills[id];
 }
