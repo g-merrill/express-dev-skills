@@ -2,10 +2,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* border: 1px solid; */
 }
 
 body {
-  padding: 10vh 0 0;
+  margin: 10vh 0 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   display: flex;
   flex-direction: column;
@@ -22,14 +23,13 @@ span.description {
 }
 
 ul {
-  margin: 10vh 0 0;
+  margin: 5% 0 0;
   list-style-type: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 45vw;
-  height: 15%;
+  width: 60%;
 }
 
 li {
@@ -38,6 +38,18 @@ li {
   align-items: center;
   width: 100%;
 }
+li>a:last-child {
+  margin-left: auto;
+}
+.description {
+  text-align: center;
+  flex-grow: 1;
+}
+
+ul + a {
+  margin: 5% 0 0;
+}
+
 h3 {
   margin: 10vh 0 0;
 }
@@ -49,4 +61,13 @@ p.experience {
 }
 .homepage {
   margin: 10vh 0 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form>* {
+  margin: 2vh 0;
 }

@@ -22,7 +22,8 @@ const skills = [
 module.exports = {
     getAll,
     getIdx,
-    getOne
+    getOne,
+    deleteOne
 };
 
 function getAll() {
@@ -37,4 +38,12 @@ function getIdx(skillString) {
 
 function getOne(id) {
     return skills[id];
+}
+
+function deleteOne(skillName) {
+    let delIdx = skills.findIndex(skill => {
+        return skill.name === skillName;
+    });
+    console.log(delIdx);
+    skills.splice(delIdx, 1);
 }

@@ -12,11 +12,15 @@
     <ul>
     <% skills.forEach((skill, idx) => { %>
         <li>
+            <form action="/skills/<%= skill.name %>?_method=DELETE" method="POST">
+                <button type="submit">X</button>
+            </form>
             <%- include('show', {skill, partial: true}) %>
             &mdash;
             <a href="/skills/<%= skill.name %>" class="see-more">See More...</a>
         </li>
     <% }); %>
     </ul>
+    <a href="/skills/new">Add skill</a>
 </body>
 </html>
