@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p class="homepage">Welcome to my dev skills homepage</p>
-    <a class="homepage" href="/skills">See my dev skills</a>
-  </body>
-</html>
+<%- include('./partials/htmlheader'); %>
+<body class="home">
+  <h1><%= title %></h1>
+  <p class="homepage">Welcome to my dev skills homepage</p>
+  <a class="homepage" href="/skills">See my dev skills</a>
+</body>
+<%- include('./partials/htmlfooter'); %>

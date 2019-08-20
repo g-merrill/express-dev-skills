@@ -2,72 +2,114 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-size: 14px;
+  font-family: "Tsukushi A Round Gothic", Avenir, "Gill Sans", Seravek, sans-serif;
   /* border: 1px solid; */
 }
-
 body {
-  margin: 10vh 0 0;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 10vh 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
 }
-
 a {
   color: #00B7FF;
 }
 
-span.description {
-  font-size: 80%;
+.home .homepage {
+  margin: 10vh 0 0;
 }
 
-ul {
+.idx .title {
+  font-size: 180%;
+}
+.idx .list-wrapper {
   margin: 5% 0 0;
   list-style-type: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 60%;
+  width: 90%;
 }
-
-li {
+.idx .list-item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
+  margin: 5% 0;
 }
-li>a:last-child {
+.idx .delete-btn {
+  background-color: red;
+  padding: 0 40%;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+.idx .list-item p {
+  margin: 0 5%;
+}
+.idx .skill-name {
+  font-weight: bold;
+  font-size: 120%;
+}
+.idx .see-more {
   margin-left: auto;
+  padding: 0 0 0 3%;
 }
-.description {
-  text-align: center;
-  flex-grow: 1;
-}
-
-ul + a {
+.idx .add-skill-btn {
   margin: 5% 0 0;
+  padding: 10px 10px;
+  border-radius: 10px;
+  background-color: #00B7FF;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-h3 {
-  margin: 10vh 0 0;
+.new .title {
+  font-size: 180%;
 }
-p.mastery {
-  margin: 5vh 0 0;
-}
-p.experience {
-  margin: 5vh 0 0;
-}
-.homepage {
-  margin: 10vh 0 0;
-}
-
-form {
+.new .form-wrapper {
+  margin: 5% 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-form>* {
-  margin: 2vh 0;
+.new .form-input {
+  margin: 0 0 15%;
+}
+.new .submit {
+  padding: 10px 10px;
+  border-radius: 10px;
+  background-color: #00B7FF;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+
+.show .title-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  font-size: 180%;
+}
+.show .title {
+  margin: 0 2% 0 0;
+  font-size: 100%;
+}
+.show .description {
+  margin: 0 0 0 2%;
+  font-size: 100%;
+}
+.show .mastery {
+  margin: 5% 0 0;
+}
+.show .experience {
+  margin: 5% 0 0;
+}
+.show .return-link {
+  margin: 10% 0 0;
 }

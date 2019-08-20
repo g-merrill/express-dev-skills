@@ -1,20 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>skills#new</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
-<body>
-    <h3>Add a New Skill</h3>
-    <form action="/skills" method="POST">
-        <input name="name" type="text" placeholder="Name">
-        <input name="description" type="text" placeholder="Description">
-        <input name="level" type="text" placeholder="Level [1-10]">
-        <input name="experience" type="text" placeholder="Experience [1-10]">
-        <input type="submit" value="Submit">
+<%- include('../partials/htmlheader'); %>
+<body class="new">
+    <h1 class="title">Add a New Skill</h1>
+    <form action="/skills" method="POST" class="form-wrapper">
+        <input name="name" type="text" placeholder="Name" class="form-input">
+        <input name="description" type="text" placeholder="Description" class="form-input">
+        <input name="level" type="text" placeholder="Level [1-10]" class="form-input">
+        <input name="experience" type="text" placeholder="Experience [1-10]" class="form-input">
+        <input type="submit" value="Submit" class="submit">
     </form>
 </body>
-</html>
+<%- include('../partials/htmlfooter'); %>

@@ -37,6 +37,7 @@ function getIdx(skillString) {
 }
 
 function getOne(id) {
+    console.log(skills);
     return skills[id];
 }
 

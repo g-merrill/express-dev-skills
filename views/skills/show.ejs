@@ -1,27 +1,16 @@
-<!DOCTYPE html>
-<% if (!partial) { %>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>skill#show</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
-<body>
-    <h3>
-<% } %>
-        <span><%= skill.name %></span>
-        &mdash;
-        <span class="description"><%= skill.description %></span>
-<% if (!partial) { %>
-    </h3>
+<%- include('../partials/htmlheader'); %>
+<body class="show">
+    <div class="title-wrapper">
+            <h3 class="title"><%= skill.name %></h3>
+            -
+            <h5 class="description"><%= skill.description %></h5>
+    </div>
     <p class="mastery">
         Mastery Level: <%= skill.level %>
     </p>
     <p class="experience">
         Amount of Experience: <%= skill.experience %>
     </p>
+    <a class="return-link" href="/skills">Return to other dev skills</a>
 </body>
-</html>
-<% } %>
+<%- include('../partials/htmlfooter'); %>

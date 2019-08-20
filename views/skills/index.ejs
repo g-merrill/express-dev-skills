@@ -1,26 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Skills Index Page</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
-<body>
-    <h1>My Dev Skills</h1>
-    <ul>
+<%- include('../partials/htmlheader'); %>
+<body class="idx">
+    <h1 class="title">My Dev Skills</h1>
+    <ul class="list-wrapper">
     <% skills.forEach((skill, idx) => { %>
-        <li>
+        <li class="list-item">
             <form action="/skills/<%= skill.name %>?_method=DELETE" method="POST">
-                <button type="submit">X</button>
+                <button type="submit" class="delete-btn">X</button>
             </form>
-            <%- include('show', {skill, partial: true}) %>
-            &mdash;
+            <p class="skill-name"><%= skill.name %></p>
+            -
+            <p class="skill-description"><%= skill.description %></p>
+            -
             <a href="/skills/<%= skill.name %>" class="see-more">See More...</a>
         </li>
     <% }); %>
     </ul>
-    <a href="/skills/new">Add skill</a>
+    <a href="/skills/new" class="add-skill-btn">Add skill</a>
 </body>
-</html>
+<%- include('../partials/htmlfooter'); %>

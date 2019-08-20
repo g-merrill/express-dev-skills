@@ -11,26 +11,32 @@ module.exports = {
 
 function index(req, res) {
     res.render('skills/index', {
-        skills: Skill.getAll()
+        skills: Skill.getAll(),
+        title: 'skills#index'
     });
 }
 
 function addNewSkill(req, res) {
-    res.render('skills/new');
+    res.render('skills/new', { title: 'skills#new' });
 }
 
 function show(req, res) {
     let idx = Skill.getIdx(req.params.skill);
+    let skill = Skill.getOne(idx);
+
+    console.log(req.params.skill, skill);
     res.render('skills/show', {
-        skill: Skill.getOne(idx),
-        partial: false
+        skill,
+        partial: false,
+        title: 'skills/show'
     });
 }
 
 function create(req, res) {
     let skills = Skill.getAll();
-    skills.push(req.body);
     console.log(req.body);
+    skills.push(req.body);
+    console.log(skills);
     res.redirect('/skills');
 }
 
